@@ -1,26 +1,67 @@
 @import "tailwindcss";
+@config "../../tailwind.config.ts";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --ozo-green: #0057B0;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* * {
+  font-family: 'Poppins', sans-serif;
+} */
+
+.product-image{
+  transition-duration: 10000ms;
+  transition-timing-function: ease-out;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.product-container:hover{
+  background-image: linear-gradient(to top, var(--ozo-green), rgba(0,0,0,0));
+  transition-duration: 1000ms;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.logo-font {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+body{
+  scrollbar-width: thin;
+}
+
+
+.nav-item::after{
+  content: "";
+  display: block;
+  width: 100%;
+  scale: 0;
+  height: 2px;
+  background: #fff;
+  transition: width .3s;
+  margin-bottom: 5px;
+}
+
+.nav-item:hover::after{
+  scale: 1;
+  transition: all 200ms;
+  align-self: center;
+}
+.nav-item-green{
+color: var(--ozo-green);
+}
+
+.nav-item-green::after{
+content: "";
+display: block;
+width: 100%;
+scale: 0;
+height: 2px;
+background: var(--ozo-green);
+transition: width .3s;
+margin-bottom: 5px;
+
+}
+
+.nav-item-green:hover::after{
+scale: 1;
+transition: all 200ms;
+align-self: center;
 }
