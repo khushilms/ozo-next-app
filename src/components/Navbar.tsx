@@ -40,7 +40,7 @@ function Navbar() {
   const [navbarOpen, setNavbarOpen] = useState(false);
   const pathname = usePathname();
 
-  const scrollCondition = pageYOffset > 0;
+  const scrollCondition = pageYOffset > 0 || pathname !== '/';
 
   const openNavbar = () => {
     setNavbarOpen(true);
@@ -57,8 +57,8 @@ function Navbar() {
       <NavItem link={'/'}>
         <div className='flex gap-2 items-center'>
           {
-            scrollCondition || pathname !== '/' ?
-              <div className={`${scrollCondition || pathname !== '/' ? 'w-20' : 'w-32'} aspect-square`}>
+            scrollCondition ?
+              <div className={`${scrollCondition ? 'w-20' : 'w-32'} aspect-square`}>
                 <Image alt='ozo-logo' width={0} height={0} src={OzoLogo} className='w-full h-full object-contain' />
               </div>
               : null
