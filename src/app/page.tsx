@@ -27,23 +27,23 @@ function Home() {
         <div className='w-screen lg:h-screen h-full absolute left-0 bg-gradient-to-t from-black/80 via-black/30 to-black/80'></div>
         <div className='w-full absolute top-0 h-full items-center grid grid-cols-2 grid-rows-2 -z-10'>
           <div className='w-full h-full'>
-            <Image src={hero3} width={0} height={0} alt="bird" className='w-full h-full object-cover' />
+            <Image src={hero3} width={0} height={0} alt="hero3" className='w-full h-full object-cover' />
           </div>
           <div className='w-full h-full'>
-            <Image src={hero1} width={0} height={0} alt="bird" className='w-full h-full object-cover' />
+            <Image src={hero1} width={0} height={0} alt="hero1" className='w-full h-full object-cover' />
           </div>
           <div className='w-full h-full'>
-            <Image src={hero2} width={0} height={0} alt="bird" className='w-full h-full object-cover' />
+            <Image src={hero2} width={0} height={0} alt="hero2" className='w-full h-full object-cover' />
           </div>
           <div className='w-full h-full'>
-            <Image src={hero4} width={0} height={0} alt="bird" className='w-full h-full object-cover' />
+            <Image src={hero4} width={0} height={0} alt="hero4" className='w-full h-full object-cover' />
           </div>
         </div>
         <div className="flex flex-col md:gap-16 gap-4 items-center z-10 md:p-10 px-4 py-10">
           <div className="flex flex-col items-center gap-4">
             <div className='flex items-center gap-4'>
               <div className="-translate-y-[10px]">
-                <OzoWhiteLeaf width={0} height={0} alt="bird" className='w-56 h-56 object-contain' />
+                <OzoWhiteLeaf width={0} height={0} className='w-56 h-56 object-contain' />
               </div>
             </div>
             <p className="uppercase lg:text-6xl md:text-5xl text-4xl text-white font-semibold">Powerful. Effective. Eco-Friendly.</p>
@@ -72,7 +72,7 @@ function Home() {
           <div className='flex gap-2 items-center'>
             <p className="text-5xl font-semibold uppercase">WHY</p>
             <div className="-translate-y-2.5">
-              <OzoWhite width={0} height={0} alt="bird" className='w-28 h-20 object-contain' />
+              <OzoWhite width={0} height={0} className='w-28 h-20 object-contain' />
             </div>
           </div>
           <p className="md:w-[600px] font-semibold md:text-base text-xs"> What sets us apart is our commitment to providing entirely non-toxic, easy-to-use, and affordable solutions.  We prioritize water conservation in all our formulations, ensuring our products are not only effective but also sustainable.</p>

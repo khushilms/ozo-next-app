@@ -6,6 +6,25 @@ import OurProducts from "@/constants/ProductTypes";
 
 const gasStoveChimney = "https://res.cloudinary.com/khalnayak069/image/upload/v1738691040/gas-stove-chimney.jpg";
 
+export async function generateMetadata() {
+  return {
+    title: 'Products - Ozo',
+    description: 'Discover our range of specialized cleaning solutions designed to deliver powerful performance while minimizing environmental impact.',
+    openGraph: {
+      title: 'Products - Ozo',
+      description: 'Discover our range of specialized cleaning solutions designed to deliver powerful performance while minimizing environmental impact.',
+      url: 'https://odofree.com/products',
+      images: [
+        {
+          url: gasStoveChimney,
+          width: 800,
+          height: 600,
+        },
+      ],
+    },
+  }
+}
+
 function Products() {
   return (
     <div className="">
