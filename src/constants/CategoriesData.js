@@ -47,4 +47,4 @@ export const categoriesData = [
     description: "The OZO Descaler range is an eco-conscious option that addresses scaling issues in sanitary ware such as toilets and urinals. With a formulation that incorporates natural, biodegradable ingredients.",
     image: "https://res.cloudinary.com/khalnayak069/image/upload/v1741109566/s3tthxfeabgwga93ygkf.jpg",
   },
-]
+];

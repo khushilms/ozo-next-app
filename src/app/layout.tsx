@@ -5,6 +5,9 @@ const poppins = Poppins({ subsets: ['latin'], weight: ['400', '500', '600', '700
 import "./globals.css";
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import Providers from './providers';
+import { getSession } from 'next-auth/react';
+import PageWrapper from '@/components/PageWrapper';
 
 
 export const metadata: Metadata = {
@@ -24,20 +27,25 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const session = await getSession();
   return (
     <html lang="en">
       <body
         className={`${poppins.className} antialiased`}
       >
-        <Navbar />
-        {children}
-        <Footer />
+        <Providers session={session}>
+          <Navbar />
+          <PageWrapper>
+            {children}
+          </PageWrapper>
+          <Footer />
+        </Providers>
       </body>
-    </html>
+    </html >
   );
 }

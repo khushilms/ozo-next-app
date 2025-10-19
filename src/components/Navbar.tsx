@@ -53,46 +53,48 @@ function Navbar() {
   }
 
   return (
-    <div className={`fixed z-50 flex justify-between transition-all w-full text-sm items-center ${scrollCondition ? 'bg-white md:px-8 px-4' : 'md:px-8 px-4'}`}>
-      <NavItem link={'/'}>
-        <div className='flex gap-2 items-center'>
-          {
-            scrollCondition ?
-              <div className={`${scrollCondition ? 'w-20' : 'w-32'} aspect-square`}>
-                <Image alt='ozo-logo' width={0} height={0} src={OzoLogo} className='w-full h-full object-contain' />
-              </div>
-              : null
-          }
-        </div>
-      </NavItem>
-      {
-        width > 700 ?
-          <div className={`${pageYOffset > 0 ? "" : "md:mt-4"} lg:w-5/12 p-4`}>
-            <ul className='flex justify-end gap-5'>
-              <NavItem link={'/'}>HOME</NavItem>
-              <NavItem link={'/products'}>PRODUCTS</NavItem>
+    <div className='shadow fixed flex justify-center w-full'>
+      <div className={`max-w-[1920px] z-50 flex justify-between transition-all w-full text-sm items-center ${scrollCondition ? 'bg-white md:px-8 px-4' : 'md:px-8 px-4'}`}>
+        <NavItem link={'/'}>
+          <div className='flex gap-2 items-center'>
+            {
+              scrollCondition ?
+                <div className={`${scrollCondition ? 'w-20' : 'w-32'} aspect-square`}>
+                  <Image alt='ozo-logo' width={0} height={0} src={OzoLogo} className='w-full h-full object-contain' />
+                </div>
+                : null
+            }
+          </div>
+        </NavItem>
+        {
+          width > 700 ?
+            <div className={`${pageYOffset > 0 ? "" : "md:mt-4"} lg:w-5/12 p-4`}>
+              <ul className='flex justify-end gap-5'>
+                <NavItem link={'/'}>HOME</NavItem>
+                <NavItem link={'/products'}>PRODUCTS</NavItem>
+                {/* <SendEnquiry /> */}
+              </ul>
+            </div>
+            :
+            <div className='py-2 z-10'>
+              {
+                navbarOpen ?
+                  <CrossIcon className='w-6 h-6 cursor-pointer' color={"black"} onClick={closeNavbar} />
+                  : <HamburgerIcon className='w-6 h-6 cursor-pointer' color={scrollCondition ? "black" : "white"} onClick={openNavbar} />
+              }
+            </div>
+        }
+        {
+          width < 700 && navbarOpen &&
+          <div className={`bg-white/90 w-full h-screen fixed ${scrollCondition ? 'top-24' : 'top-0 pt-10'} left-0`}>
+            <ul className='flex flex-col justify-center items-center gap-5 p-10'>
+              <NavItemMobile link={'/'} closeNavbar={closeNavbar}>HOME</NavItemMobile>
+              <NavItemMobile link={'/products'} closeNavbar={closeNavbar}>PRODUCTS</NavItemMobile>
               {/* <SendEnquiry /> */}
             </ul>
           </div>
-          :
-          <div className='py-2 z-10'>
-            {
-              navbarOpen ?
-                <CrossIcon className='w-6 h-6 cursor-pointer' color={"black"} onClick={closeNavbar} />
-                : <HamburgerIcon className='w-6 h-6 cursor-pointer' color={scrollCondition ? "black" : "white"} onClick={openNavbar} />
-            }
-          </div>
-      }
-      {
-        width < 700 && navbarOpen &&
-        <div className={`bg-white/90 w-full h-screen fixed ${scrollCondition ? 'top-24' : 'top-0 pt-10'} left-0`}>
-          <ul className='flex flex-col justify-center items-center gap-5 p-10'>
-            <NavItemMobile link={'/'} closeNavbar={closeNavbar}>HOME</NavItemMobile>
-            <NavItemMobile link={'/products'} closeNavbar={closeNavbar}>PRODUCTS</NavItemMobile>
-            {/* <SendEnquiry /> */}
-          </ul>
-        </div>
-      }
+        }
+      </div>
     </div>
   )
 }

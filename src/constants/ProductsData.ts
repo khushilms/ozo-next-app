@@ -1,7 +1,7 @@
 export const ProductsData = [
   {
     path: "/drain-care",
-    categoryId: "drain-care",
+    categoryId: 2,
     name: "DRAIN CARE",
     description: "Tailored Drain Care Solutions for every industry. Our line of drain digesters and cleaners is expertly designed to address diverse use cases.",
     products: [
@@ -32,41 +32,41 @@ export const ProductsData = [
         ],
         keyFeatures: [
           {
-            name: "Effective Cleaning",
+            title: "Effective Cleaning",
             description: "Rapidly dissolves organic buildup, oils, and residues in kitchen drains."
           },
           {
-            name: "Natural and Safe",
+            title: "Natural and Safe",
             description: "Made from 100% natural ingredients, safe for users and the environment."
           },
           {
-            name: "Non-Corrosive",
+            title: "Non-Corrosive",
             description: "Gentle on plumbing, preventing damage and extending the life of your kitchen pipes."
           },
           {
-            name: "Easy to Use",
+            title: "Easy to Use",
             description: "Simple application process, with no need for special tools or equipment."
           },
           {
-            name: "Surface-Friendly",
+            title: "Surface-Friendly",
             description: "Gentle on all types of kitchen plumbing materials, preventing any damage or wear."
           },
           {
-            name: "Preventative Maintenance",
+            title: "Preventative Maintenance",
             description: "Regular use helps prevent future clogs and maintains optimal drain performance."
           }
         ],
         howToUse: [
           {
-            name: "Prepare the Area",
+            title: "Prepare the Area",
             description: "Ensure the kitchen drain is free from standing water."
           },
           {
-            name: "Application",
+            title: "Application",
             description: "Measure the recommended amount of OZO Klear powder and pour it directly into the drain."
           },
           {
-            name: "Let it Work",
+            title: "Let it Work",
             description: "Allow the product to sit for a few minutes to effectively dissolve the contents."
           }
         ]
@@ -98,45 +98,45 @@ export const ProductsData = [
         ],
         keyFeatures: [
           {
-            name: "Fast-Acting",
+            title: "Fast-Acting",
             description: "OZO P-Sol rapidly dissolves any light mineral scale, unwanted organic matter, and keeps your lavatory plumbing free of any buildup."
           },
           {
-            name: "Non-Abrasive",
+            title: "Non-Abrasive",
             description: "It is gentle on surfaces, preventing any damage to your restroom fixtures."
           },
           {
-            name: "Long-Lasting Protection",
+            title: "Long-Lasting Protection",
             description: "Our formula not only removes existing unwanted buildup in your lavatories but also provides a protective barrier to prevent further buildup."
           },
           {
-            name: "Safe and Environmentally Friendly",
+            title: "Safe and Environmentally Friendly",
             description: "OZO P-Sol is free from harsh chemicals, making it safe for both your staff and the environment."
           },
           {
-            name: "Easy to Use",
+            title: "Easy to Use",
             description: "Simple application process, with no need for special tools or equipment."
           },
           {
-            name: "Cost-Effective",
+            title: "Cost-Effective",
             description: "A little goes a long way, making it an economical choice for restroom cleaning and maintenance."
           }
         ],
         howToUse: [
           {
-            name: "Preparation",
+            title: "Preparation",
             description: "Ensure the lavatory area is dry and remove any standing water."
           },
           {
-            name: "Application",
+            title: "Application",
             description: "Apply the recommended amount of OZO P-Sol to the affected area or directly into the plumbing system."
           },
           {
-            name: "Let it Work",
+            title: "Let it Work",
             description: "Allow the solution to sit for a few minutes to break down residue and buildup."
           },
           {
-            name: "Rinse",
+            title: "Rinse",
             description: "Flush or rinse the area with clean water to complete the cleaning process."
           }
         ]
@@ -184,45 +184,45 @@ export const ProductsData = [
         ],
         keyFeatures: [
           {
-            name: "Effective Residue Breakdown",
+            title: "Effective Residue Breakdown",
             description: "Rapidly dissolves dairy-based residues, ensuring consistent pipeline efficiency."
           },
           {
-            name: "Sanitary Drainage Maintenance",
+            title: "Sanitary Drainage Maintenance",
             description: "Maintains a hygienic environment by preventing bacterial and microbial growth."
           },
           {
-            name: "Non-Toxic & Safe",
+            title: "Non-Toxic & Safe",
             description: "Acid-free and non-corrosive, ensuring safety for both equipment and users."
           },
           {
-            name: "Sustainable & Eco-Friendly",
+            title: "Sustainable & Eco-Friendly",
             description: "Biodegradable formulation supports responsible resource consumption."
           },
           {
-            name: "Cost-Effective Solution",
+            title: "Cost-Effective Solution",
             description: "Reduces frequent maintenance needs, lowering operational costs over time."
           },
           {
-            name: "Optimized for Dairy Processing",
+            title: "Optimized for Dairy Processing",
             description: "Specially designed to handle the unique challenges of dairy waste management."
           }
         ],
         howToUse: [
           {
-            name: "Preparation",
+            title: "Preparation",
             description: "Measure three caps of OZO Dairy Pure and dilute in 250mL of water, ensuring uniform mixing."
           },
           {
-            name: "Application",
+            title: "Application",
             description: "Administer the solution directly into the drainage system, ensuring it reaches areas prone to buildup."
           },
           {
-            name: "Action Time",
+            title: "Action Time",
             description: "Allow the solution to act for several minutes to break down residues before flushing with water."
           },
           {
-            name: "Routine Maintenance",
+            title: "Routine Maintenance",
             description: "For optimal results, integrate into routine maintenance schedules to prevent buildup and ensure consistent performance."
           }
         ]
@@ -285,62 +285,62 @@ export const ProductsData = [
         ],
         keyFeatures: [
           {
-            name: "Pipeline Health & Hygiene",
+            title: "Pipeline Health & Hygiene",
             description:
               "Maintains clear, obstruction-free pipelines, ensuring optimal sanitation in bakery environments.",
           },
           {
-            name: "Easy Application",
+            title: "Easy Application",
             description:
               "Simple dosage and application process require no specialized tools or training.",
           },
           {
-            name: "Water Conservation",
+            title: "Water Conservation",
             description:
               "Reduces the need for excessive rinsing compared to traditional degreasing solutions.",
           },
           {
-            name: "Long-Term Cost Savings",
+            title: "Long-Term Cost Savings",
             description:
               "Minimizes expenses related to pipeline maintenance, repairs, and blockages.",
           },
           {
-            name: "Eco-Friendly & Biodegradable",
+            title: "Eco-Friendly & Biodegradable",
             description:
               "Safe for sewage treatment plants and free from harmful chemicals, reducing environmental impact.",
           },
           {
-            name: "Versatile Usage",
+            title: "Versatile Usage",
             description:
               "Suitable for various bakery operations, from large-scale commercial plants to artisanal bakeries.",
           },
         ],
         howToUse: [
           {
-            name: "Preparation",
+            title: "Preparation",
             description: "Take three caps of OZO B-SOL.",
           },
           {
-            name: "Mixing",
+            title: "Mixing",
             description: "Mix the measured amount with 250 mL of water until fully dissolved.",
           },
           {
-            name: "Application",
+            title: "Application",
             description: "Pour the solution directly down the pipeline outlet.",
           },
           {
-            name: "Maintenance",
+            title: "Maintenance",
             description:
               "Repeat as necessary based on your pipeline maintenance schedule to prevent blockages and ensure efficient drainage.",
           },
         ],
       },
-      
+
     ]
   },
   {
     path: "/descaler",
-    categoryId: "descaler",
+    categoryId: 4,
     name: "DESCALER",
     description: "The OZO Descaler range is an eco-conscious option that addresses scaling issues in sanitary ware such as toilets and urinals. With a formulation that incorporates natural, biodegradable ingredients.",
     products: [
@@ -352,149 +352,149 @@ export const ProductsData = [
         image: "",
         howItWorks: "OZO D’MARK employs a unique formulation of environmentally safe and biodegradable ingredients that dissolve mineral deposits on various restroom surfaces. Its powerful yet gentle formula restores the cleanliness and functionality of fixtures while preventing further buildup.",
         benefits: [
-            {
-                title: "Enhanced Aesthetics",
-                description: "Regular use of OZO D’MARK maintains the pristine appearance of restroom fixtures, leaving a positive impression on visitors and users."
-            },
-            {
-                title: "Increased Fixture Lifespan",
-                description: "Prevents scale buildup, extending the life of faucets, sinks, toilets, and showerheads."
-            },
-            {
-                title: "Reduced Maintenance Costs",
-                description: "Minimizes cleaning efforts and the frequency of maintenance, leading to cost savings."
-            },
-            {
-                title: "Improved Hygiene",
-                description: "Removes mineral deposits that can harbor bacteria, promoting a healthier restroom environment."
-            }
+          {
+            title: "Enhanced Aesthetics",
+            description: "Regular use of OZO D’MARK maintains the pristine appearance of restroom fixtures, leaving a positive impression on visitors and users."
+          },
+          {
+            title: "Increased Fixture Lifespan",
+            description: "Prevents scale buildup, extending the life of faucets, sinks, toilets, and showerheads."
+          },
+          {
+            title: "Reduced Maintenance Costs",
+            description: "Minimizes cleaning efforts and the frequency of maintenance, leading to cost savings."
+          },
+          {
+            title: "Improved Hygiene",
+            description: "Removes mineral deposits that can harbor bacteria, promoting a healthier restroom environment."
+          }
         ],
         keyFeatures: [
-            {
-                name: "Fast-Acting",
-                description: "Rapidly dissolves scale and mineral buildup, reducing cleaning time and effort."
-            },
-            {
-                name: "Non-Abrasive",
-                description: "Gentle on restroom fixtures, preventing damage to surfaces."
-            },
-            {
-                name: "Long-Lasting Protection",
-                description: "Prevents further scaling, extending the lifespan of restroom equipment."
-            },
-            {
-                name: "Safe and Environmentally Friendly",
-                description: "Free from harsh chemicals, ensuring safety for users and the environment."
-            }
+          {
+            title: "Fast-Acting",
+            description: "Rapidly dissolves scale and mineral buildup, reducing cleaning time and effort."
+          },
+          {
+            title: "Non-Abrasive",
+            description: "Gentle on restroom fixtures, preventing damage to surfaces."
+          },
+          {
+            title: "Long-Lasting Protection",
+            description: "Prevents further scaling, extending the lifespan of restroom equipment."
+          },
+          {
+            title: "Safe and Environmentally Friendly",
+            description: "Free from harsh chemicals, ensuring safety for users and the environment."
+          }
         ],
         howToUse: [
-            {
-                name: "Preparation",
-                description: "Ensure the surface is free from debris and dry before application."
-            },
-            {
-                name: "Application",
-                description: "Apply OZO D’MARK to the affected area and let it sit for a few minutes."
-            },
-            {
-                name: "Scrubbing",
-                description: "Gently scrub the surface with a brush or cloth to remove buildup."
-            },
-            {
-                name: "Rinsing",
-                description: "Rinse the surface thoroughly with clean water and wipe dry."
-            }
+          {
+            title: "Preparation",
+            description: "Ensure the surface is free from debris and dry before application."
+          },
+          {
+            title: "Application",
+            description: "Apply OZO D’MARK to the affected area and let it sit for a few minutes."
+          },
+          {
+            title: "Scrubbing",
+            description: "Gently scrub the surface with a brush or cloth to remove buildup."
+          },
+          {
+            title: "Rinsing",
+            description: "Rinse the surface thoroughly with clean water and wipe dry."
+          }
         ]
-    },
-    {
-      route: "/descaler/ozo-urinew",
-      productId: "ozo-urinew",
-      name: "OZO Urinew",
-      description: "OZO Urinew is an advanced, non-corrosive urinal scale remediation solution designed for efficacy in high-utilization sanitation environments. Engineered with a chemically balanced, eco-conscious formulation, it efficiently dissolves uric acid deposits and other mineral accretions without reliance on caustic acids or hazardous compounds. This ensures both the structural integrity of plumbing infrastructure and the maintenance of optimal hygiene standards within commercial and institutional restrooms.",
-      image: "",
-      howItWorks: "OZO Urinew actively breaks down uric acid deposits and mineral accretions using a scientifically formulated blend that does not rely on corrosive acids. Its unique composition allows for effective scale dissolution within minutes, reducing the need for abrasive scrubbing or extensive manual labor.",
-      benefits: [
+      },
+      {
+        route: "/descaler/ozo-urinew",
+        productId: "ozo-urinew",
+        name: "OZO Urinew",
+        description: "OZO Urinew is an advanced, non-corrosive urinal scale remediation solution designed for efficacy in high-utilization sanitation environments. Engineered with a chemically balanced, eco-conscious formulation, it efficiently dissolves uric acid deposits and other mineral accretions without reliance on caustic acids or hazardous compounds. This ensures both the structural integrity of plumbing infrastructure and the maintenance of optimal hygiene standards within commercial and institutional restrooms.",
+        image: "",
+        howItWorks: "OZO Urinew actively breaks down uric acid deposits and mineral accretions using a scientifically formulated blend that does not rely on corrosive acids. Its unique composition allows for effective scale dissolution within minutes, reducing the need for abrasive scrubbing or extensive manual labor.",
+        benefits: [
           {
-              title: "Infrastructure Longevity",
-              description: "Prevents mineral buildup, extending the lifespan of urinal fixtures and drainage systems."
+            title: "Infrastructure Longevity",
+            description: "Prevents mineral buildup, extending the lifespan of urinal fixtures and drainage systems."
           },
           {
-              title: "Non-Toxic and Biocompatible",
-              description: "Formulated without aggressive chemicals, ensuring safety for both users and plumbing systems."
+            title: "Non-Toxic and Biocompatible",
+            description: "Formulated without aggressive chemicals, ensuring safety for both users and plumbing systems."
           },
           {
-              title: "Optimized Cleaning Kinetics",
-              description: "Requires only five minutes of dwell time to dissolve uric scale effectively, minimizing maintenance time."
+            title: "Optimized Cleaning Kinetics",
+            description: "Requires only five minutes of dwell time to dissolve uric scale effectively, minimizing maintenance time."
           },
           {
-              title: "Water Resource Optimization",
-              description: "Efficient formulation reduces water consumption needed for rinsing, supporting sustainability goals."
+            title: "Water Resource Optimization",
+            description: "Efficient formulation reduces water consumption needed for rinsing, supporting sustainability goals."
           },
           {
-              title: "Aesthetic and Functional Integrity",
-              description: "Prevents staining, discoloration, and scaling-related obstructions, keeping restrooms clean and operable."
+            title: "Aesthetic and Functional Integrity",
+            description: "Prevents staining, discoloration, and scaling-related obstructions, keeping restrooms clean and operable."
           },
           {
-              title: "Pathogen Suppression and Odor Control",
-              description: "Inhibits bacterial growth and eliminates odors by removing residual organic matter."
+            title: "Pathogen Suppression and Odor Control",
+            description: "Inhibits bacterial growth and eliminates odors by removing residual organic matter."
           }
-      ],
-      keyFeatures: [
+        ],
+        keyFeatures: [
           {
-              name: "Eco-Friendly Composition",
-              description: "Developed with non-toxic, biodegradable ingredients for safe and sustainable usage."
+            title: "Eco-Friendly Composition",
+            description: "Developed with non-toxic, biodegradable ingredients for safe and sustainable usage."
           },
           {
-              name: "Fast-Acting Formula",
-              description: "Dissolves urinal scale in minutes, reducing labor and cleaning time."
+            title: "Fast-Acting Formula",
+            description: "Dissolves urinal scale in minutes, reducing labor and cleaning time."
           },
           {
-              name: "Minimal Scrubbing Required",
-              description: "Effectively works without the need for extensive mechanical action."
+            title: "Minimal Scrubbing Required",
+            description: "Effectively works without the need for extensive mechanical action."
           },
           {
-              name: "Safe for Plumbing Infrastructure",
-              description: "Non-corrosive formula ensures pipes and urinal surfaces remain undamaged over time."
+            title: "Safe for Plumbing Infrastructure",
+            description: "Non-corrosive formula ensures pipes and urinal surfaces remain undamaged over time."
           },
           {
-              name: "Enhanced Hygiene Standards",
-              description: "Maintains restroom cleanliness, preventing odor and microbial contamination."
+            title: "Enhanced Hygiene Standards",
+            description: "Maintains restroom cleanliness, preventing odor and microbial contamination."
           }
-      ],
-      howToUse: [
+        ],
+        howToUse: [
           {
-              name: "Application",
-              description: "Evenly distribute OZO Urinew across the urinal surface, concentrating on scaling-prone areas."
+            title: "Application",
+            description: "Evenly distribute OZO Urinew across the urinal surface, concentrating on scaling-prone areas."
           },
           {
-              name: "Dwell Time",
-              description: "Allow the product to sit for five minutes to facilitate the breakdown of uric acid deposits."
+            title: "Dwell Time",
+            description: "Allow the product to sit for five minutes to facilitate the breakdown of uric acid deposits."
           },
           {
-              name: "Rinsing",
-              description: "Flush or rinse the surface with water to remove dissolved residue and restore urinal cleanliness."
+            title: "Rinsing",
+            description: "Flush or rinse the surface with water to remove dissolved residue and restore urinal cleanliness."
           }
-      ],
-      idealApplications: [
+        ],
+        idealApplications: [
           "Large-scale commercial and institutional restrooms",
           "Public sanitation infrastructure and transit hubs",
           "Hospitality industry, including hotels and restaurants",
           "Retail centers and high-traffic shopping environments",
           "Educational institutions and healthcare establishments"
-      ],
-      whyChoose: [
+        ],
+        whyChoose: [
           "Reduces maintenance costs by preventing scale accumulation and plumbing degradation.",
           "Promotes sustainable sanitation practices through minimized water usage.",
           "Streamlines janitorial workflows by offering a quick and labor-efficient cleaning process.",
           "Ensures superior hygiene standards in high-footfall restroom environments.",
           "Extends the functional life of urinals through a non-corrosive, material-safe formulation."
-      ]
-  }
+        ]
+      }
     ]
   },
   {
     path: "/degreaser",
-    categoryId: "degreaser",
+    categoryId: 1,
     name: "DEGREASER",
     description: "OZO line of degreasers offers a comprehensive range of products, including oil stain removers, floor cleaners, metal degreasers. Designed for both light and heavy-duty tasks.",
     products: [
@@ -529,37 +529,37 @@ export const ProductsData = [
         ],
         keyFeatures: [
           {
-            name: "Enhanced Cleanliness",
+            title: "Enhanced Cleanliness",
             description: "Leaves floors impeccably clean and free of grease and grime."
           },
           {
-            name: "Eco-Friendly",
+            title: "Eco-Friendly",
             description: "Supports a sustainable cleaning routine with its all-natural and biodegradable formula."
           },
           {
-            name: "Health and Safety",
+            title: "Health and Safety",
             description: "Ensures a safe environment for food preparation by eliminating harsh chemicals."
           },
           {
-            name: "Easy to Use",
+            title: "Easy to Use",
             description: "Simple application process, with no need for special tools or equipment."
           },
           {
-            name: "Surface-Friendly",
+            title: "Surface-Friendly",
             description: "Gentle on all types of kitchen flooring, preventing any damage or discoloration."
           },
           {
-            name: "Cost-Effective",
+            title: "Cost-Effective",
             description: "A little goes a long way, making it an economical choice for kitchen cleaning."
           }
         ],
         howToUse: [
           {
-            name: "Preparation",
+            title: "Preparation",
             description: "Mix the recommended amount of OZO Kitchen Floor Cleaner with water according to the instructions on the label."
           },
           {
-            name: "Application",
+            title: "Application",
             description: "Spray the prepared solution across the kitchen floor and wipe the area with a wet mop or cloth ensuring even coverage."
           }
         ]
@@ -591,45 +591,45 @@ export const ProductsData = [
         ],
         keyFeatures: [
           {
-            name: "Powerful Degreasing",
+            title: "Powerful Degreasing",
             description: "Effectively removes grease, stubborn oil stains, and carbon deposits from various kitchen surfaces."
           },
           {
-            name: "Non-Toxic",
+            title: "Non-Toxic",
             description: "Free from harsh chemicals, making it safe for use around food preparation areas."
           },
           {
-            name: "Easy to Use",
+            title: "Easy to Use",
             description: "Simple application process, with no need for special tools or equipment."
           },
           {
-            name: "Surface-Friendly",
+            title: "Surface-Friendly",
             description: "Gentle on all types of kitchen surfaces, preventing any damage or discoloration."
           },
           {
-            name: "Cost-Effective",
+            title: "Cost-Effective",
             description: "A little goes a long way, making it an economical choice for kitchen cleaning."
           },
           {
-            name: "Versatile Use",
+            title: "Versatile Use",
             description: "Suitable for use on a wide range of kitchen surfaces, including countertops, stovetops, ovens, and exhaust hoods."
           }
         ],
         howToUse: [
           {
-            name: "Preparation",
+            title: "Preparation",
             description: "Wipe away any loose debris or food particles from the surface. Prepare the solution of OZO V10 as prescribed by the instructions on the label."
           },
           {
-            name: "Application",
+            title: "Application",
             description: "Spray the solution directly onto the greasy or stained area."
           },
           {
-            name: "Scrubbing",
+            title: "Scrubbing",
             description: "Allow the solution to sit for a few minutes to penetrate the buildup. For stubborn stains, scrub gently with a sponge or brush."
           },
           {
-            name: "Rinsing",
+            title: "Rinsing",
             description: "Rinse the surface thoroughly with clean water and wipe dry with a clean cloth or towel."
           }
         ]
@@ -673,63 +673,63 @@ export const ProductsData = [
         ],
         keyFeatures: [
           {
-            name: "Heavy-Duty Cleaning",
+            title: "Heavy-Duty Cleaning",
             description: "Removes even the toughest grease and oil stains with ease."
           },
           {
-            name: "Eco-Friendly Composition",
+            title: "Eco-Friendly Composition",
             description: "Formulated with non-toxic ingredients to ensure safety for both users and the environment."
           },
           {
-            name: "Water-Efficient Technology",
+            title: "Water-Efficient Technology",
             description: "Designed for effective cleaning with minimal water usage."
           },
           {
-            name: "Long-Lasting Gel Formula",
+            title: "Long-Lasting Gel Formula",
             description: "Stays on surfaces longer for improved degreasing action."
           },
           {
-            name: "Versatile Application",
+            title: "Versatile Application",
             description: "Suitable for commercial kitchens, industrial equipment, and automotive cleaning."
           },
           {
-            name: "Cost-Effective Solution",
+            title: "Cost-Effective Solution",
             description: "Requires minimal product use for maximum cleaning impact."
           }
         ],
         howToUse: [
           {
-            name: "Pre-Treatment (For Persistent Stains)",
+            title: "Pre-Treatment (For Persistent Stains)",
             description: "Lightly scrub the affected surface to break up hardened oil and dirt layers before application."
           },
           {
-            name: "Product Application",
+            title: "Product Application",
             description: "Apply OZO NOVA OD directly onto the surface using a clean cloth, ensuring even coverage."
           },
           {
-            name: "Dwell Time for Maximum Effectiveness",
+            title: "Dwell Time for Maximum Effectiveness",
             description: "Allow the gel to sit undisturbed for a few minutes to penetrate deep and break down grime."
           },
           {
-            name: "Final Cleaning Process",
+            title: "Final Cleaning Process",
             description: "Wipe away loosened contaminants with a fresh cloth or rinse with minimal water as needed."
           }
         ],
         safetyInstructions: [
           {
-            name: "Storage",
+            title: "Storage",
             description: "Store in a cool, dry place, away from direct sunlight to maintain product effectiveness."
           },
           {
-            name: "Handling Precautions",
+            title: "Handling Precautions",
             description: "Keep out of reach of children and unauthorized personnel."
           },
           {
-            name: "Protective Measures",
+            title: "Protective Measures",
             description: "For extended handling, use protective gloves to prevent prolonged skin contact."
           },
           {
-            name: "Emergency Procedures",
+            title: "Emergency Procedures",
             description: "In case of eye contact, rinse immediately with clean water and seek medical advice if irritation persists."
           }
         ]
@@ -769,63 +769,63 @@ export const ProductsData = [
         ],
         keyFeatures: [
           {
-            name: "Non-Toxic & Eco-Friendly",
+            title: "Non-Toxic & Eco-Friendly",
             description: "Contains no harmful chemicals, making it safe for both users and the environment."
           },
           {
-            name: "Advanced Gel-Based Formula",
+            title: "Advanced Gel-Based Formula",
             description: "Adheres to surfaces longer for deeper penetration and enhanced cleaning."
           },
           {
-            name: "Versatile Application",
+            title: "Versatile Application",
             description: "Suitable for domestic, commercial, and industrial stainless steel maintenance."
           },
           {
-            name: "Streak-Free Finish",
+            title: "Streak-Free Finish",
             description: "Leaves surfaces polished and spotless without residue or streaking."
           },
           {
-            name: "Corrosion Prevention",
+            title: "Corrosion Prevention",
             description: "Protects stainless steel surfaces from structural degradation and corrosive damage."
           },
           {
-            name: "Water Conservation",
+            title: "Water Conservation",
             description: "Requires minimal water usage, aligning with sustainable cleaning practices."
           }
         ],
         howToUse: [
           {
-            name: "Pre-Treatment (For Stubborn Stains)",
+            title: "Pre-Treatment (For Stubborn Stains)",
             description: "Gently scrub the affected area to loosen embedded debris before application."
           },
           {
-            name: "Product Application",
+            title: "Product Application",
             description: "Dispense a moderate amount of OZO NOVA ST gel onto a clean, lint-free cloth."
           },
           {
-            name: "Surface Treatment",
+            title: "Surface Treatment",
             description: "Thoroughly scrub the surface in circular motions to ensure deep penetration and stain removal."
           },
           {
-            name: "Final Cleaning Process",
+            title: "Final Cleaning Process",
             description: "Use a slightly damp cloth to wipe away residual product, leaving a polished, streak-free finish."
           }
         ],
         safetyInstructions: [
           {
-            name: "Storage Recommendations",
+            title: "Storage Recommendations",
             description: "Store in a cool, dry place away from direct sunlight to maintain product effectiveness."
           },
           {
-            name: "Handling Precautions",
+            title: "Handling Precautions",
             description: "Keep out of reach of children and unauthorized personnel."
           },
           {
-            name: "Protective Measures",
+            title: "Protective Measures",
             description: "For extended handling, wear protective gloves to prevent prolonged skin contact."
           },
           {
-            name: "Emergency Procedures",
+            title: "Emergency Procedures",
             description: "In case of eye contact, rinse thoroughly with clean water and seek medical assistance if irritation persists."
           }
         ]
@@ -834,7 +834,7 @@ export const ProductsData = [
   },
   {
     path: "/odour-care",
-    categoryId: "odour-care",
+    categoryId: 3,
     name: "ODOUR CARE",
     description: "The OZO Odor Care Range offers eco-conscious options aimed at addressing unpleasant odors in an effective and sustainable manner.",
     products: [
@@ -865,41 +865,41 @@ export const ProductsData = [
         ],
         keyFeatures: [
           {
-            name: "Fast-Acting",
+            title: "Fast-Acting",
             description: "OZO Urinill quickly neutralizes and eliminates odors upon application."
           },
           {
-            name: "Long-Lasting",
+            title: "Long-Lasting",
             description: "Provides prolonged odor control, ensuring a fresh-smelling restroom throughout the day."
           },
           {
-            name: "Non-Toxic and Safe",
+            title: "Non-Toxic and Safe",
             description: "Made from organic and biodegradable ingredients, OZO Urinill is safe for users and the environment."
           },
           {
-            name: "Surface-Friendly",
+            title: "Surface-Friendly",
             description: "Gentle on all types of restroom flooring, preventing any damage or discoloration."
           },
           {
-            name: "Economical",
+            title: "Economical",
             description: "Its long-lasting formula means less frequent application, offering a cost-effective solution to odor management."
           }
         ],
         howToUse: [
           {
-            name: "Preparation",
+            title: "Preparation",
             description: "Ensure restroom floor is dry and free from any debris."
           },
           {
-            name: "Application",
+            title: "Application",
             description: "Prepare the solution as per the instructions prescribed."
           },
           {
-            name: "Let it Work",
+            title: "Let it Work",
             description: "Allow the product to sit for a few minutes to effectively neutralize odors."
           },
           {
-            name: "Routine Maintenance",
+            title: "Routine Maintenance",
             description: "For best results, use OZO Urinill as part of your daily cleaning routine as prescribed."
           }
         ]
@@ -942,45 +942,45 @@ export const ProductsData = [
         ],
         keyFeatures: [
           {
-            name: "Root Cause Elimination",
+            title: "Root Cause Elimination",
             description: "Directly neutralizes bad smells instead of just masking them.",
           },
           {
-            name: "Water Efficiency",
+            title: "Water Efficiency",
             description: "Uses minimal water compared to traditional deodorizing solutions.",
           },
           {
-            name: "User-Friendly",
+            title: "User-Friendly",
             description: "Quick and simple preparation with no complicated steps or additional tools needed.",
           },
           {
-            name: "Long-Lasting Freshness",
+            title: "Long-Lasting Freshness",
             description: "Ensures spaces remain odour-free for an extended period.",
           },
           {
-            name: "Eco-Friendly",
+            title: "Eco-Friendly",
             description: "Sustainable formula that minimizes chemical waste and water consumption.",
           },
           {
-            name: "Multi-Purpose",
+            title: "Multi-Purpose",
             description: "Suitable for homes, offices, and commercial spaces, ensuring freshness wherever needed.",
           },
         ],
         howToUse: [
           {
-            name: "Preparation",
+            title: "Preparation",
             description: "Add 400 mL of water to a clean spray bottle.",
           },
           {
-            name: "Mixing",
+            title: "Mixing",
             description: "Open the OZO OFA package and pour the entire gel contents into the spray bottle.",
           },
           {
-            name: "Activation",
+            title: "Activation",
             description: "Shake the bottle gently until the gel completely dissolves.",
           },
           {
-            name: "Application",
+            title: "Application",
             description: "Spray the solution directly onto areas requiring deodorization to eliminate odours at the source.",
           },
         ],
