@@ -23,7 +23,7 @@ export async function generateMetadata({
   params: Promise<{ productId: string, categoryId: string }>;
 }) {
   const { productId, categoryId } = await params;
-  const category = ProductsData.find(category => category.categoryId === categoryId);
+  const category = ProductsData.find(category => String(category.categoryId) === categoryId);
   const product = category?.products?.find(product => product.productId === productId);
 
   if (!product || !category) {
@@ -56,7 +56,7 @@ async function ProductPage({
   params: Promise<{ productId: string, categoryId: string }>;
 }) {
   const { productId, categoryId } = await params;
-  const category = ProductsData.find(category => category.categoryId === categoryId);
+  const category = ProductsData.find(category => String(category.categoryId) === categoryId);
   const product = category?.products?.find(product => product.productId === productId);
 
   if (!product || !category) {
@@ -112,7 +112,7 @@ async function ProductPage({
               <div key={index} className='flex md:gap-8 gap-4 p-4 bg-white'>
                 <div className='md:text-7xl text-5xl text-ozo-green font-semibold'>{index + 1}</div>
                 <div className='flex flex-col'>
-                  <p className='text-xl font-semibold text-ozo-green'>{use.name}</p>
+                  <p className='text-xl font-semibold text-ozo-green'>{use.title}</p>
                   <p className='text-sm'>{use.description}</p>
                 </div>
               </div>
@@ -128,7 +128,7 @@ async function ProductPage({
               <div key={index} className='w-full h-full relative'>
                 <div className='absolute top-0 left-0 w-20 h-4/5 bg-ozo-green z-0 -translate-x-3 -translate-y-3' />
                 <div className='flex flex-col p-4 bg-ozo-green-light w-full h-full z-5 relative'>
-                  <p className='text-xl font-semibold text-ozo-green'>{feature.name}</p>
+                  <p className='text-xl font-semibold text-ozo-green'>{feature.title}</p>
                   <p>{feature.description}</p>
                 </div>
               </div>

@@ -3,7 +3,6 @@ import { authOptions } from "@/lib/auth";
 import Categories from "./categories";
 import Products from "./products";
 import Link from 'next/link';
-import PageWrapper from '@/components/PageWrapper';
 
 export default async function AdminPage() {
   const session = await getServerSession(authOptions);

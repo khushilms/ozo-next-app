@@ -1,4 +1,4 @@
-import { PrismaClient } from "@/generated/prisma";
+import { PrismaClient } from "../../node_modules/.prisma/client";
 import { PrismaLibSQL } from "@prisma/adapter-libsql";
 
 const globalForPrisma = global as unknown as { prisma: PrismaClient };

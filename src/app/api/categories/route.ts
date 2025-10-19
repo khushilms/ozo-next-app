@@ -12,6 +12,7 @@ export async function GET() {
     });
     return NextResponse.json(categories);
   } catch (error) {
+    console.error("Error fetching categories:", error);
     return NextResponse.json({ error: "Failed to fetch categories" }, { status: 500 });
   }
 }
@@ -28,6 +29,7 @@ export async function POST(req: Request) {
     const category = await prisma.category.create({ data });
     return NextResponse.json(category, { status: 201 });
   } catch (error) {
+    console.error("Error creating category:", error);
     return NextResponse.json({ error: "Failed to create category" }, { status: 500 });
   }
 }
@@ -47,6 +49,7 @@ export async function PUT(req: Request) {
     });
     return NextResponse.json(category);
   } catch (error) {
+    console.error("Error updating category:", error);
     return NextResponse.json({ error: "Failed to update category" }, { status: 500 });
   }
 }
@@ -63,6 +66,7 @@ export async function DELETE(req: Request) {
     await prisma.category.delete({ where: { id } });
     return NextResponse.json({ message: "Category deleted" });
   } catch (error) {
+    console.error("Error deleting category:", error);
     return NextResponse.json({ error: "Failed to delete category" }, { status: 500 });
   }
 }

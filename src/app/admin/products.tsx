@@ -1,7 +1,7 @@
 "use client";
 
 import ButtonLoader from '@/components/ButtonLoader';
-import { Product } from '@/generated/prisma';
+import { Product } from '../../../node_modules/.prisma/client';
 import Image from 'next/image';
 import { useEffect, useState } from "react";
 
