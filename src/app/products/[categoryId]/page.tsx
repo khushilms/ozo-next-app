@@ -8,14 +8,14 @@ import NotFoundPage from '@/app/not-found';
 
 export async function generateStaticParams() {
   return categoriesData.map(category => ({
-    categoryId: category.id,
+    categoryId: String(category.id),
   }))
 }
 
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ categoryId: string }>;
+  params: Promise<{ categoryId: number }>;
 }) {
   const { categoryId } = await params;
 
@@ -48,7 +48,7 @@ export async function generateMetadata({
 async function CategoryPage({
   params,
 }: {
-  params: Promise<{ categoryId: string }>;
+  params: Promise<{ categoryId: number }>;
 }) {
   const { categoryId } = await params;
 

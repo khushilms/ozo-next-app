@@ -12,7 +12,7 @@ const capitalizeName = (name: string) => {
 export async function generateStaticParams() {
   const categories = ProductsData.flatMap(category => category.products.map(product => ({
     productId: product.productId,
-    categoryId: category.categoryId,
+    categoryId: String(category.categoryId),
   })));
   return categories;
 }
@@ -20,10 +20,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ productId: string, categoryId: string }>;
+  params: Promise<{ productId: string, categoryId: number }>;
 }) {
   const { productId, categoryId } = await params;
-  const category = ProductsData.find(category => String(category.categoryId) === categoryId);
+  const category = ProductsData.find(category => category.categoryId === categoryId);
   const product = category?.products?.find(product => product.productId === productId);
 
   if (!product || !category) {
@@ -53,10 +53,10 @@ export async function generateMetadata({
 async function ProductPage({
   params,
 }: {
-  params: Promise<{ productId: string, categoryId: string }>;
+  params: Promise<{ productId: string, categoryId: number }>;
 }) {
   const { productId, categoryId } = await params;
-  const category = ProductsData.find(category => String(category.categoryId) === categoryId);
+  const category = ProductsData.find(category => category.categoryId === categoryId);
   const product = category?.products?.find(product => product.productId === productId);
 
   if (!product || !category) {
