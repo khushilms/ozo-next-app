@@ -1,0 +1,73 @@
+diff --git a/node_modules/@prisma/nextjs-monorepo-workaround-plugin/index.d.ts b/node_modules/@prisma/nextjs-monorepo-workaround-plugin/index.d.ts
+new file mode 100644
+index 0000000..0ecd9cb
+--- /dev/null
++++ b/node_modules/@prisma/nextjs-monorepo-workaround-plugin/index.d.ts
+@@ -0,0 +1,67 @@
++// prisma-plugin.d.ts
++
++/// <reference types="node" />
++
++import { Compiler, Compilation } from 'webpack';
++import { PathLike } from 'fs';
++
++/**
++ * Options for PrismaPlugin
++ */
++export interface PrismaPluginOptions {
++  // Currently generic, extend with any plugin-specific options if needed
++  [key: string]: any;
++}
++
++/**
++ * Finds the Prisma directory given a starting path.
++ * Resolves either the directory containing `schema.prisma` or
++ * the generated Prisma client.
++ * 
++ * @param from - The starting path to search for Prisma files
++ * @returns Promise resolving to the Prisma directory path
++ */
++export declare function getPrismaDir(from: string): Promise<string>;
++
++/**
++ * Gets all relevant Prisma files (schema + engine) in a directory.
++ * 
++ * @param from - The starting path to search for Prisma files
++ * @returns Promise resolving to an array of Prisma filenames
++ */
++export declare function getPrismaFiles(from: string): Promise<string[]>;
++
++/**
++ * Webpack plugin to automatically include Prisma schema and engine files
++ * into the build output and update references in emitted assets.
++ */
++export declare class PrismaPlugin {
++  options: PrismaPluginOptions;
++
++  /**
++   * @param options - Plugin configuration options
++   */
++  constructor(options?: PrismaPluginOptions);
++
++  /**
++   * Apply the plugin to a Webpack compiler
++   * 
++   * @param compiler - Webpack Compiler instance
++   */
++  apply(compiler: Compiler): void;
++
++  /**
++   * Internal helper: Map of original Prisma file paths to their copies in output
++   */
++  private originAssetsToCopies: Record<string, string[]>;
++
++  /**
++   * Internal helper: Array of unique Prisma directories (origins)
++   */
++  private origins: string[];
++
++  /**
++   * Internal helper: Regex to match Prisma client output paths in JS assets
++   */
++  private prismaDirRegex: RegExp;
++}
