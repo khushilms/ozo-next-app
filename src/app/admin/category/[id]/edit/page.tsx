@@ -27,6 +27,10 @@ export default function EditCategoryPage() {
   const [path, setPath] = useState("");
   const [image, setImage] = useState("");
 
+  const handleBack = () => {
+    router.push(`/admin/category/${id}`);
+  };
+
   useEffect(() => {
     async function fetchCategory() {
       try {
@@ -81,7 +85,14 @@ export default function EditCategoryPage() {
   if (error) return <p className="p-4 text-red-500">{error}</p>;
 
   return (
-    <div className="bg-white rounded space-y-4 w-full p-10 max-w-4xl mx-auto">
+    <div className="bg-white rounded space-y-4 w-full max-w-4xl mx-auto">
+      <div>
+        <button>
+          <div className='mb-4'>
+            <button onClick={handleBack} className='text-blue-500 hover:underline cursor-pointer text-sm'>&larr; Back</button>
+          </div>
+        </button>
+      </div>
       <h2 className="text-xl font-bold">Edit Category</h2>
       <div className='flex gap-4 w-full'>
         <div className='w-[20rem] h-[20rem] flex items-center justify-center bg-gray-100 overflow-hidden'>

@@ -44,7 +44,7 @@ export default function CategoriesAdminPage() {
   }
 
   return (
-    <div className="p-10">
+    <div>
       <div>
         <button onClick={handleBack} className='text-blue-500 hover:underline cursor-pointer text-sm'>&larr; Back</button>
       </div>

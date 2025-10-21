@@ -74,9 +74,8 @@ export default function CategoryDetailPage() {
   }
 
   return (
-    <div className="p-10 space-y-8">
-      {/* Category Header */}
-      <div>
+    <div className="">
+      <div className='mb-4'>
         <button onClick={handleBack} className='text-blue-500 hover:underline cursor-pointer text-sm'>&larr; Back</button>
       </div>
       <div className="flex flex-col md:flex-row gap-6">

@@ -156,8 +156,8 @@ function AddEditProduct({
 
 
   return (
-    <div className="p-10 max-w-7xl mx-auto flex flex-col gap-2">
-      <div>
+    <div className="max-w-7xl mx-auto flex flex-col gap-2">
+      <div className='mb-4'>
         <button onClick={handleBack} className='text-blue-500 hover:underline cursor-pointer text-sm'>&larr; Back</button>
       </div>
       <h1 className="text-2xl font-bold mb-6">{isEditMode ? "Edit Product" : "Add New Product"}</h1>
