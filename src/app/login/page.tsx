@@ -3,8 +3,10 @@
 import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import ButtonLoader from '@/components/ButtonLoader';
 
 export default function LoginPage() {
+  const [isLoading, setIsLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -12,11 +14,13 @@ export default function LoginPage() {
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
     const res = await signIn("credentials", {
       redirect: false,
       email,
       password,
     });
+    setIsLoading(false);
 
     if (res?.error) {
       setError("Invalid credentials");
@@ -47,8 +51,8 @@ export default function LoginPage() {
           className="border p-2 rounded"
         />
         {error && <p className="text-red-500">{error}</p>}
-        <button type="submit" className="bg-blue-500 text-white p-2 rounded">
-          Login
+        <button type="submit" className="bg-blue-500 text-white p-2 rounded cursor-pointer flex justify-center items-center">
+          {isLoading ? <ButtonLoader /> : "Login"}
         </button>
       </form>
     </div>

@@ -30,8 +30,8 @@ const nextConfig: NextConfig = {
     ],
     unoptimized: true,
   },
+  serverExternalPackages: ["@libsql/client", "@prisma/adapter-libsql"],
   experimental: {
-    serverComponentsExternalPackages: ["@libsql/client", "@prisma/adapter-libsql"],
     turbo: {
       rules: {
         '*.svg': {

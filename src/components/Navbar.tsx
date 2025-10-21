@@ -53,7 +53,7 @@ function Navbar() {
   }
 
   return (
-    <div className='shadow fixed flex justify-center w-full'>
+    <div className='shadow fixed flex justify-center w-full z-50'>
       <div className={`max-w-[1920px] z-50 flex justify-between transition-all w-full text-sm items-center ${scrollCondition ? 'bg-white md:px-8 px-4' : 'md:px-8 px-4'}`}>
         <NavItem link={'/'}>
           <div className='flex gap-2 items-center'>
