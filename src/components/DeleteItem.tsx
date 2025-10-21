@@ -6,12 +6,14 @@ import { useRouter } from 'next/navigation';
 
 interface DeleteItemProps {
   type: 'product' | 'category';
+  actionType?: 'button' | 'link';
   itemId: string;
 }
 
 function DeleteItem({
   type,
   itemId,
+  actionType = 'button',
 }: DeleteItemProps) {
   const router = useRouter();
   const [isOpen, setIsOpen] = useState(false);
@@ -35,9 +37,17 @@ function DeleteItem({
 
   return (
     <>
-      <button onClick={() => setIsOpen(true)} className='text-sm cursor-pointer bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600'>
-        Delete {getTitleCase(type)}
-      </button>
+      {
+        actionType === 'link' ? (
+          <button onClick={() => setIsOpen(true)} className='text-red-500 rounded hover:underline cursor-pointer text-sm'>
+            Delete {getTitleCase(type)}
+          </button>
+        ) : (
+          <button onClick={() => setIsOpen(true)} className='text-sm cursor-pointer bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600'>
+            Delete {getTitleCase(type)}
+          </button>
+        )
+      }
       {
         isOpen && createPortal(
           <div className='fixed top-0 z-50 bg-black/30 w-screen h-screen flex items-center justify-center' onClick={() => setIsOpen(false)}>
@@ -53,7 +63,7 @@ function DeleteItem({
                 <button onClick={() => setIsOpen(false)} className='px-4 py-2 rounded border border-gray-300 hover:bg-gray-100'>
                   Cancel
                 </button>
-                <button onClick={handleDelete} className='bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600'>
+                <button onClick={handleDelete} className='bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 cursor-pointer'>
                   {isLoading ? <ButtonLoader /> : ('Delete')}
                 </button>
               </div>

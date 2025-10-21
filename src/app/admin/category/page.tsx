@@ -6,10 +6,17 @@ import AddCategory from '@/components/AddCategory';
 import Modal from '@/components/Modal';
 import ItemCard from '@/components/ItemCard';
 import { Category } from '@/types/category';
+import ButtonLoader from '@/components/ButtonLoader';
+import { useRouter } from 'next/navigation';
 
 export default function CategoriesAdminPage() {
   const [categories, setCategories] = useState<Category[]>([]);
   const [loading, setLoading] = useState(true);
+  const router = useRouter();
+
+  const handleBack = () => {
+    router.push('/admin');
+  };
 
   useEffect(() => {
     const fetchCategories = async () => {
@@ -29,11 +36,18 @@ export default function CategoriesAdminPage() {
   }, []);
 
   if (loading) {
-    return <div className="p-6">Loading categories...</div>;
+    return (
+      <div className="p-6">
+        <ButtonLoader />
+      </div>
+    );
   }
 
   return (
-    <div className="p-10 pt-[150px]">
+    <div className="p-10">
+      <div>
+        <button onClick={handleBack} className='text-blue-500 hover:underline cursor-pointer text-sm'>&larr; Back</button>
+      </div>
       <div className='flex justify-between items-center mb-6'>
         <p className="text-2xl font-bold mb-6">Categories</p>
         <Modal

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import DeleteItem from './DeleteItem';
 
 interface ItemCardProps {
   id: string;
@@ -53,6 +54,11 @@ const ItemCard = ({
               </Link>
             )
           }
+          <DeleteItem
+            itemId={id}
+            type={type}
+            actionType='link'
+          />
         </div>
         <span className="text-xs text-gray-400">{path}</span>
       </div>

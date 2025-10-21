@@ -78,6 +78,16 @@ function AddEditProduct({
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
+  const handleBack = () => {
+    if (isEditMode && productCategoryId) {
+      router.push(`/admin/category/${productCategoryId}`);
+    } else if (categoryId) {
+      router.push(`/admin/category/${categoryId}`);
+    } else {
+      router.push('/admin');
+    }
+  };
+
   const handleArrayChange = (
     field: "benefits" | "keyFeatures" | "howToUse",
     index: number,
@@ -138,7 +148,7 @@ function AddEditProduct({
 
   if (loading) {
     return (
-      <div className='p-10 pt-[150px]'>
+      <div className='p-10'>
         <ButtonLoader />
       </div>
     );
@@ -146,7 +156,10 @@ function AddEditProduct({
 
 
   return (
-    <div className="p-10 pt-[150px] max-w-7xl mx-auto flex flex-col gap-2">
+    <div className="p-10 max-w-7xl mx-auto flex flex-col gap-2">
+      <div>
+        <button onClick={handleBack} className='text-blue-500 hover:underline cursor-pointer text-sm'>&larr; Back</button>
+      </div>
       <h1 className="text-2xl font-bold mb-6">{isEditMode ? "Edit Product" : "Add New Product"}</h1>
       <Accordion
         id="product-description"

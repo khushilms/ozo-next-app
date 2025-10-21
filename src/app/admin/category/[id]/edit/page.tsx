@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
 import Image from 'next/image';
+import ButtonLoader from '@/components/ButtonLoader';
 
 type Category = {
   id: number;
@@ -76,11 +77,11 @@ export default function EditCategoryPage() {
     }
   };
 
-  if (loading) return <p className="p-4">Loading...</p>;
+  if (loading) return <div className="p-4"><ButtonLoader /></div>;
   if (error) return <p className="p-4 text-red-500">{error}</p>;
 
   return (
-    <div className="bg-white rounded space-y-4 w-full p-10 pt-[150px] max-w-4xl mx-auto">
+    <div className="bg-white rounded space-y-4 w-full p-10 max-w-4xl mx-auto">
       <h2 className="text-xl font-bold">Edit Category</h2>
       <div className='flex gap-4 w-full'>
         <div className='w-[20rem] h-[20rem] flex items-center justify-center bg-gray-100 overflow-hidden'>
@@ -119,13 +120,13 @@ export default function EditCategoryPage() {
           <div className="flex gap-2">
             <button
               onClick={handleUpdate}
-              className="bg-ozo-green text-white p-2 rounded flex-1"
+              className="bg-ozo-green text-white p-2 rounded flex-1 cursor-pointer"
             >
               Save
             </button>
             <button
               onClick={() => router.push("/admin/category")}
-              className="bg-gray-300 p-2 rounded flex-1"
+              className="bg-gray-300 p-2 rounded flex-1 cursor-pointer"
             >
               Cancel
             </button>

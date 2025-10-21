@@ -2,7 +2,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useParams } from "next/navigation";
+import { useParams, useRouter } from "next/navigation";
 import Link from "next/link";
 import Image from 'next/image';
 import ItemCard from '@/components/ItemCard';
@@ -31,6 +31,11 @@ export default function CategoryDetailPage() {
   const { id } = params; // category id
   const [category, setCategory] = useState<Category | null>(null);
   const [loading, setLoading] = useState(true);
+  const router = useRouter();
+
+  const handleBack = () => {
+    router.push('/admin');
+  };
 
   useEffect(() => {
     const fetchCategory = async () => {
@@ -51,7 +56,7 @@ export default function CategoryDetailPage() {
 
   if (loading) {
     return (
-      <div className="pt-[150px] p-10">
+      <div className="p-10">
         <ButtonLoader />
       </div>
     );
@@ -59,7 +64,7 @@ export default function CategoryDetailPage() {
 
   if (!category) {
     return (
-      <div className="pt-[150px] p-10">
+      <div className="p-10">
         <p>Category not found</p>
         <Link href="/admin" className="text-blue-500 hover:underline">
           Go back to dashboard
@@ -69,8 +74,11 @@ export default function CategoryDetailPage() {
   }
 
   return (
-    <div className="p-10 space-y-8 pt-[150px]">
+    <div className="p-10 space-y-8">
       {/* Category Header */}
+      <div>
+        <button onClick={handleBack} className='text-blue-500 hover:underline cursor-pointer text-sm'>&larr; Back</button>
+      </div>
       <div className="flex flex-col md:flex-row gap-6">
         {
           category.image ? (

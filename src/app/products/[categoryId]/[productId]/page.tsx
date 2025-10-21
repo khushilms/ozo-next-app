@@ -97,7 +97,7 @@ async function ProductPage({
             </div>
           </div>
           <div className='flex gap-4 items-center w-full xs:justify-start justify-evenly'>
-            <button className='bg-ozo-green hover:bg-ozo-green/70 text-white md:px-8 px-4 md:py-2.5 py-2 text-sm font-semibold border-2 shadow border-white'>
+            <button className='bg-ozo-green hover:bg-ozo-green/70 text-white md:px-8 px-4 md:py-2.5 py-2 text-sm font-semibold border-2 shadow border-white cursor-pointer'>
               Know More
             </button>
             {/* <SendEnquiry /> */}

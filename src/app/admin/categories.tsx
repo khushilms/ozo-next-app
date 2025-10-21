@@ -1,7 +1,7 @@
 "use client";
 
 import ButtonLoader from '@/components/ButtonLoader';
-import Image from 'next/image';
+import ItemHorizontalCard from '@/components/ItemHorizontalCard';
 import Link from 'next/link';
 import { useEffect, useState } from "react";
 
@@ -41,14 +41,14 @@ export default function Categories() {
           </div>
         )}
         {categories.map((c) => (
-          <Link href={`/admin/category/${c.id}`} key={c.id} className='border rounded border-gray-400 flex items-center cursor-pointer hover:shadow-lg'>
-            <Image width={0} height={0} src={c.image || '/placeholder.png'} alt={c.name} className="w-20 h-20 object-cover mr-2 inline-block" />
-            <div className='flex flex-col'>
-              <p className="font-medium">{c.name}</p>
-              <p>ID: {c.id} </p>
-              <p>Path: {c.path}</p>
-            </div>
-          </Link>
+          <ItemHorizontalCard
+            key={c.id}
+            id={c.id}
+            image={c.image || null}
+            name={c.name}
+            route={c.path}
+            type="category"
+          />
         ))}
       </div>
     </div>
