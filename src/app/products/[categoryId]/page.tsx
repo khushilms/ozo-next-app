@@ -12,7 +12,7 @@ export async function generateMetadata({
 }) {
   const { categoryId } = await params;
 
-  const categoryData: CategoryData = await fetch(`http://localhost:3000/api/categories/p/${categoryId}`)
+  const categoryData: CategoryData = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/categories/p/${categoryId}`)
     .then(res => res.json());
 
   if (!categoryData) {
@@ -27,7 +27,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${categoryData.name} - Ozo`,
       description: categoryData.description,
-      url: `https://odofree.com/products/${categoryId}`,
+      url: `${process.env.NEXT_PUBLIC_URL}/products/${categoryId}`,
       images: [
         {
           url: categoryData.image,

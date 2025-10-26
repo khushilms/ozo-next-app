@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ozo",
     description: "We develop and manufacture a range of specialized, eco-friendly cleaning and maintenance solutions designed to conserve water and maximize efficiency. Our products are uniquely formulated to address specific cleaning challenges across various industries, from descaling and degreasing to drain care and general maintenance.",
-    url: "https://odofree.com/",
+    url: process.env.NEXT_PUBLIC_URL || "https://www.odofree.com",
     images: [
       {
         url: "/ozo-white-leaf.svg",

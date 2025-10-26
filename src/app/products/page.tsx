@@ -11,7 +11,7 @@ export async function generateMetadata() {
     openGraph: {
       title: 'Products - Ozo',
       description: 'Discover our range of specialized cleaning solutions designed to deliver powerful performance while minimizing environmental impact.',
-      url: 'https://odofree.com/products',
+      url: `${process.env.NEXT_PUBLIC_URL}/products`,
       images: [
         {
           url: gasStoveChimney,

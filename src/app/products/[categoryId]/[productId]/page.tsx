@@ -10,8 +10,8 @@ export async function generateMetadata({
   params: Promise<{ productId: string, categoryId: number }>;
 }) {
   const { productId, categoryId } = await params;
-  const category: CategoryQueryData = await fetch(`http://localhost:3000/api/categories/p/${categoryId}`).then(res => res.json());
-  const product: Product = await fetch(`http://localhost:3000/api/products/p/${productId}`).then(res => res.json());
+  const category: CategoryQueryData = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/categories/p/${categoryId}`).then(res => res.json());
+  const product: Product = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/products/p/${productId}`).then(res => res.json());
 
   if (!product || !category) {
     return {
@@ -25,7 +25,7 @@ export async function generateMetadata({
     openGraph: {
       title: `${capitalizeName(product.name)} - ${capitalizeName(category.name)}`,
       description: product.description,
-      url: `https://odofree.com/products/${categoryId}/${productId}`,
+      url: `${process.env.NEXT_PUBLIC_URL}/products/${categoryId}/${productId}`,
       images: [
         {
           url: product.image,
