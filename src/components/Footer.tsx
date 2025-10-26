@@ -10,8 +10,9 @@ import useCategories from '@/hooks/useCategories';
 
 // import SendEnquiry from '../SendEnquiry/SendEnquiry';
 
-const CategorySection = ({ name, products }: {
+const CategorySection = ({ name, categoryRoute, products }: {
   name: string,
+  categoryRoute: string,
   products: {
     name: string,
     route: string
@@ -23,7 +24,7 @@ const CategorySection = ({ name, products }: {
       <div className='flex flex-col gap-1'>
         {
           products.map((product, index) => (
-            <Link href={`/products${product.route}`} key={index} className='text-xs text-gray-500 cursor-pointer hover:text-gray-800 sm:text-left text-center'>{product.name}</Link>
+            <Link href={`/products${categoryRoute}${product.route}`} key={index} className='text-xs text-gray-500 cursor-pointer hover:text-gray-800 sm:text-left text-center'>{product.name}</Link>
           ))
         }
       </div>
@@ -51,7 +52,7 @@ function Footer() {
           <div className='w-full lg:flex lg:flex-row xl:gap-20 lg:gap-10 sm:grid flex flex-col grid-cols-2 grid-rows-2 gap-4 justify-center'>
             {
               categories.map((category, index) => {
-                return <CategorySection key={index} name={category.name} products={category.products} />
+                return <CategorySection key={index} categoryRoute={category.path} name={category.name} products={category.products} />
               })
             }
           </div>
