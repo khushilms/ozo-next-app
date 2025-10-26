@@ -6,8 +6,8 @@ const ProductCard = ({
   image
 }: {
   title: string,
-  description: string,
-  image: string | StaticImageData | undefined;
+  description: string | null;
+  image: string | StaticImageData | undefined | null;
 }) => {
   return (
     <div className="flex flex-col gap-4 items-center relative overflow-hidden aspect-square group/product cursor-pointer ">

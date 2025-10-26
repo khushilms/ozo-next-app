@@ -41,7 +41,7 @@ export default async function RootLayout({
         <Providers session={session}>
           <Navbar />
           <PageWrapper>
-            {children}
+            <div className=''>{children}</div>
           </PageWrapper>
           <Footer />
         </Providers>

@@ -18,7 +18,7 @@ export default function Products() {
   }, []);
 
   if (isLoading) {
-    return <ButtonLoader />;
+    return <div className='p-10'><ButtonLoader /></div>;
   }
   return (
     <div>

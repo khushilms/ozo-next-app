@@ -6,7 +6,7 @@ function AdminLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className='p-6 space-y-6 pt-[120px]'>{children}</div>
+    <div className='min-h-[500px] pt-[120px] py-4 md:px-10 px-4'>{children}</div>
   )
 }
 

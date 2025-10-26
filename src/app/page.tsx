@@ -1,14 +1,12 @@
-import Link from 'next/link';
 import Image from 'next/image';
 
 import ScrollToViewButton from '@/components/buttons/ScrollToViewButton';
 import whyUnioOrganicsData from '@/constants/WhyUnioOrganics';
-import OurProducts from '@/constants/ProductTypes';
 import WhyOzoImageContainer from '@/components/WhyOzoImageContainer';
-import ProductCard from '@/components/ProductCard';
 
 import OzoWhiteLeaf from '@/assets/ozo-white-leaf.svg';
 import OzoWhite from '@/assets/ozo-white.svg';
+import ProductsContainer from '@/components/ProductsContainer';
 
 // const homeBG = "https://res.cloudinary.com/khalnayak069/image/upload/v1738691040/gas-stove-chimney.jpg";
 // const home2 = "https://res.cloudinary.com/dx3cfts2k/image/upload/v1691044575/home_2-min_glaqpf.jpg";
@@ -62,7 +60,6 @@ function Home() {
           <div className="lg:w-3/4 w-full flex flex-col md:gap-10 gap-4 sm:items-start items-center">
             <p className="uppercase font-semibold lg:text-6xl/normal md:text-4xl text-2xl sm:text-left text-center">Targeted Solutions for a Cleaner World</p>
             <p className="lg:text-lg md:text-sm text-xs sm:text-left text-center">We develop and manufacture a range of specialized, eco-friendly cleaning and maintenance solutions designed to conserve water and maximize efficiency.  Our products are uniquely formulated to address specific cleaning challenges across various industries, from descaling and degreasing to drain care and general maintenance. </p>
-            {/* <button className="border-2 border-ozo-purple px-3 py-2 font-ozo-purple hover:bg-ozo-purple hover:text-white transition-all" onClick={() => whyUnioOrganicsRef.current.scrollIntoView({ behavior: "smooth", block: "center" })}>LEARN MORE</button> */}
             <ScrollToViewButton title='LEARN MORE' targetId='why-unio-organics' className='border-2 border-ozo-purple px-3 py-2 font-ozo-purple hover:bg-ozo-purple hover:text-white transition-all' />
           </div>
         </div>
@@ -71,7 +68,7 @@ function Home() {
         <div className="flex flex-col items-center gap-6">
           <div className='flex gap-2 items-center'>
             <p className="text-5xl font-semibold uppercase">WHY</p>
-            <div className="-translate-y-2.5">
+            <div className="-translate-y-3.5">
               <OzoWhite width={0} height={0} className='w-28 h-20 object-contain' />
             </div>
           </div>
@@ -93,17 +90,7 @@ function Home() {
           <p className="text-center md:w-3/6 sm:w-4/6 font-semibold md:text-2xl sm:text-sm text-xs">Discover our range of premium solutions tailored to meet your unique requirements.</p>
         </div>
         <div className="flex justify-center md:p-10">
-          <div className='grid sm:grid-cols-2 grid-cols-2 md:gap-6 lg:gap-10 gap-4 md:w-2/3'>
-            {
-              OurProducts.map((item, index) => {
-                return (
-                  <Link key={index} href={item.link}>
-                    <ProductCard {...item} />
-                  </Link>
-                )
-              })
-            }
-          </div>
+          <ProductsContainer />
         </div>
       </div>
     </div>

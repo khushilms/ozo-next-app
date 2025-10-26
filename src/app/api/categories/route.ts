@@ -6,7 +6,6 @@ import { authOptions } from "@/lib/auth";
 // GET all categories
 export async function GET() {
   try {
-
     const categories = await prisma.category.findMany({
       include: { products: true },
     });

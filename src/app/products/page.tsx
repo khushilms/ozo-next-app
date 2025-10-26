@@ -1,8 +1,6 @@
-import Link from 'next/link';
 import Image from 'next/image';
 
-import ProductCard from "@/components/ProductCard";
-import OurProducts from "@/constants/ProductTypes";
+import ProductsContainer from '@/components/ProductsContainer';
 
 const gasStoveChimney = "https://res.cloudinary.com/khalnayak069/image/upload/v1738691040/gas-stove-chimney.jpg";
 
@@ -23,12 +21,11 @@ export async function generateMetadata() {
       ],
     },
   }
-}
+};
 
 function Products() {
   return (
-    <div className="">
-      <div className="h-[120px]"></div>
+    <div>
       <div className="w-full overflow-hidden relative md:h-[500px] h-auto">
         <div className="absolute w-full flex items-center overflow-hiddenz -z-10">
           <Image alt='gas-stove-chimney' width={0} height={0} src={gasStoveChimney} className="object-cover w-full h-full -scale-x-100" />
@@ -41,17 +38,7 @@ function Products() {
           </div>
         </div>
       </div>
-      <div className="grid md:grid-cols-3 grid-cols-2 gap-5 justify-center lg:p-20 md:p-10 p-5">
-        {
-          OurProducts.map((product, index) => {
-            return (
-              <Link key={index} href={product.link}>
-                <ProductCard {...product} />
-              </Link>
-            )
-          })
-        }
-      </div>
+      <ProductsContainer />
     </div>
   )
 }

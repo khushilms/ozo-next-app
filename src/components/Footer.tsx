@@ -1,12 +1,12 @@
+'use client';
 import Link from 'next/link';
 import Image from 'next/image';
-
-import { ProductsData } from '@/constants/ProductsData';
 
 import OzoLogo from '@/assets/ozo-logo-main-no-title.png';
 import MailIcon from '@/assets/mail.svg';
 import PhoneIcon from '@/assets/call.svg';
 import LocationPin from '@/assets/location.svg';
+import useCategories from '@/hooks/useCategories';
 
 // import SendEnquiry from '../SendEnquiry/SendEnquiry';
 
@@ -32,6 +32,12 @@ const CategorySection = ({ name, products }: {
 }
 
 function Footer() {
+  const { data: categories, isLoading, isError } = useCategories();
+
+  if (isLoading || isError || !categories) {
+    return null;
+  }
+
   return (
     <div className='flex justify-center bg-gray-100'>
       <div className='max-w-[1920px] flex flex-col xl:p-20 lg:p-10 p-6'>
@@ -44,7 +50,7 @@ function Footer() {
           </div>
           <div className='w-full lg:flex lg:flex-row xl:gap-20 lg:gap-10 sm:grid flex flex-col grid-cols-2 grid-rows-2 gap-4 justify-center'>
             {
-              ProductsData.map((category, index) => {
+              categories.map((category, index) => {
                 return <CategorySection key={index} name={category.name} products={category.products} />
               })
             }

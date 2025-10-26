@@ -26,7 +26,7 @@ export default function Categories() {
   }, []);
 
   if (isLoading) {
-    return <ButtonLoader />;
+    return <div className='p-10'><ButtonLoader /></div>;
   }
 
   return (
